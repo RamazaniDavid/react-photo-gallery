@@ -1,0 +1,191 @@
+@import url("http://fonts.cdnfonts.com/css/homemade-apple");
+@import "~bootstrap/scss/bootstrap.scss";
+
+:root {
+  --primary: #efb6b2;
+  --secondary: #4e4e4e;
+  --error: #ececec;
+}
+
+/* base styles & title */
+body {
+  font-family: "Homemade Apple", cursive;
+  font-size: 20px;
+  background: url("https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-repeat: repeat;
+  color: #000;
+}
+.App {
+  top: 1vh;
+  text-align: center;
+  max-height: 98vh;
+  height: 98vh;
+  overflow: auto;
+}
+.custom-file-input {
+  visibility: hidden;
+}
+
+.upload-btn {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  color: white;
+  font-size: 2em;
+}
+
+.error {
+  color: var(--error);
+}
+
+/* progress bar styles */
+.progress-bar {
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+}
+
+/* modal styles */
+.modal-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.modal-container {
+  position: fixed;
+  background: transparent;
+  width: 90vw;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-children {
+  text-align: center;
+  -webkit-box-align: center;
+}
+.modal-children .modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.modal-info-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 0px;
+  background-color: #d9d9d9d1;
+  padding: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: red;
+}
+
+.gallery-container {
+  margin: 20px;
+  padding: 0% 5% 0% 10%;
+}
+
+.gallery-container > li {
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  border: solid 12px #fff;
+  background: #fff;
+  box-shadow: 0 0 15px 0px #555;
+  transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  top: 50px;
+  cursor: pointer !important;
+
+  text-align: -webkit-center;
+}
+
+.gallery-container > li:hover {
+  top: 0px;
+  opacity: 0.5;
+}
+
+.gallery-container > li:nth-child(8n) {
+  transform: rotate(random(90)-45deg);
+}
+
+.gallery-container > li:nth-child(8n + 1) {
+  transform: rotate(random(90)-45deg);
+}
+
+.gallery-container > li:nth-child(8n + 2) {
+  transform: rotate(random(90)-45deg);
+}
+
+.gallery-container > li:nth-child(8n + 3) {
+  transform: rotate(random(90)-45deg);
+}
+
+.gallery-container > li:nth-child(8n + 4) {
+  transform: rotate(random(90)-45deg);
+}
+
+.gallery-container > li:nth-child(8n + 5) {
+  transform: rotate(random(90)-45deg);
+}
+
+.gallery-container > li:nth-child(8n + 6) {
+  transform: rotate(random(90)-45deg);
+}
+
+.gallery-container > li:nth-child(8n + 7) {
+  transform: rotate(random(90)-45deg);
+}
+
+.gallery-container > li > p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  max-lines: 3;
+  max-width: 200px;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #866a5c;
+  border-radius: 20px;
+  border: 6px solid #ab9b92;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ab9b92;
+}
+
+* {
+  scrollbar-color: #ab9b92 #866a5c;
+  scrollbar-width: thin;
+}
